@@ -48,8 +48,8 @@ public class BaseTest {
         setupDriver(browserName);
       captureRequests.captureHttpRequests(driver,browserName);
         driver.manage().window().maximize();
-        driver.get(Constants.url);
-        driver.get(Constants.urlApi);
+//        driver.get(Constants.url);
+//        driver.get(Constants.urlApi);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 

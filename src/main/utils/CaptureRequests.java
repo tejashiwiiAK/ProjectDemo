@@ -29,9 +29,9 @@ public class CaptureRequests {
                 entry->{
                 System.out.println("Request URL  is :" + entry.getRequest().getUrl());
                     System.out.println("Request type  is :" +entry.getRequest().getMethod());
-                });
-
-       }
+        });
 
     }
+
+}
 

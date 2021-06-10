@@ -1,7 +1,6 @@
 package main.java.pageEvents;
 
 import main.java.pageObjects.CreateUserAccountPageElements;
-import main.java.pageObjects.HomePageElements;
 import main.utils.Constants;
 import main.utils.ElementFetch;
 import org.openqa.selenium.By;

@@ -62,15 +62,19 @@ public class OrderItemsPageEvents {
         ElementFetch elementFetch = new ElementFetch();
         BaseTest.logger.info("orderpayment");
         elementFetch.getWebElement("XPATH", OrderItemsPageElements.orderPaymentText);
-//        elementFetch.getWebElement("XPATH", OrderItemsPageElements.shippingDetailsText);
         elementFetch.getWebElement("XPATH",OrderItemsPageElements.nextButton).click();
         this.sleep(2);
-//        elementFetch.getWebElement("XPATH", OrderItemsPageElements.paymentMethodText);
+        elementFetch.getWebElement("CSS", OrderItemsPageElements.safeUsername).clear();
+        elementFetch.getWebElement("CSS", OrderItemsPageElements.safePassword).clear();
         elementFetch.getWebElement("CSS", OrderItemsPageElements.safeUsername).sendKeys(Constants.safeUsername);
         elementFetch.getWebElement("CSS", OrderItemsPageElements.safePassword).sendKeys(Constants.safePassword);
-        elementFetch.getWebElement("XPATH",OrderItemsPageElements.payNowButton);
-        System.out.println("payed");
-        this.sleep(8);
+        WebElement l=driver.findElement(By.xpath("//button[contains(.,'PAY NOW')]"));
+        // Javascript executor
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", l);
+        l.click();
+//        elementFetch.getWebElement("XPATH",OrderItemsPageElements.payNowButton);
+       System.out.println("payed");
+        this.sleep(15);
         String OrderCompleted =  driver.findElement(By.xpath("//h2[contains(.,'Thank you for buying with Advantage')]")).getText();
         if(OrderCompleted.equals("Thank you for buying with Advantage")) {
             System.out.println("----------Sucess, order conpleted -------");

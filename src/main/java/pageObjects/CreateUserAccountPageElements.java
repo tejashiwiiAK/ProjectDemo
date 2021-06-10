@@ -21,9 +21,6 @@ public interface CreateUserAccountPageElements {
     String postalCode= "input[name='postal_codeRegisterPage'][type=text]";
     String agree = "input[name='i_agree'][type=checkbox]";
     String register = "button[id='register_btnundefined'][type=button]";
-   // String userExists = "//label[contains(text(),'User name already exists')]";
-
-    String accountExists = "//label[contains(text(),'ALREADY HAVE AN ACCOUNT?')]";
 
 
 

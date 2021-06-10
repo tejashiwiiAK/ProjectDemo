@@ -9,14 +9,4 @@ public interface OrderItemsPageElements {
     String safeUsername = "input[name='safepay_username'][type=text]";
     String safePassword = "input[name='safepay_password'][type=password]";
     String payNowButton = "//button[contains(.,'PAY NOW')]";
-
-
-
-
-
-
-
-
-
-
 }

@@ -18,8 +18,6 @@ public interface Constants {
     String passwordLog = "Airwatch123";
     String safeUsername = "testpay";
     String safePassword = "Testpay1";
-
-
     String urlApi = "https://github.com/r-spacex/SpaceX-API";
 
 }

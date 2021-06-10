@@ -12,6 +12,7 @@ public class SampleTest  extends  BaseTest{
 
     @Test
     public void actionMethods() {
+        driver.navigate().to("http://advantageonlineshopping.com/#/");
         HomePageEvents homePageEvents = new HomePageEvents();
         LoginPageEvents loginPageEvents = new LoginPageEvents();
         CreateUserAccountPageEvents userAccountPageEvents = new CreateUserAccountPageEvents();
